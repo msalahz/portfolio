@@ -55,8 +55,8 @@ function App() {
     <div className="min-h-screen bg-black">
 
       <Header />
-      <section className="relative py-24 px-6 text-center">
-        <div className="relative max-w-4xl mx-auto">
+      <section className="relative pt-24 pb-32 px-6 text-center w-[60vw] min-h-screen flex items-center justify-center mx-auto">
+        <div className="relative w-full max-w-4xl mx-auto">
           <div className="flex flex-col items-center gap-8 mb-10">
             <img
               src="/circle_picture.png"
@@ -94,8 +94,9 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section id="services" className="min-h-screen w-[60vw] pt-20 pb-32 px-6 flex items-center justify-center mx-auto">
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <div
               key={index}
@@ -110,6 +111,7 @@ function App() {
               </p>
             </div>
           ))}
+          </div>
         </div>
       </section>
     </div>
