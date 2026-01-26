@@ -1,0 +1,22 @@
+{
+  "initialized": true,
+  "mode": "file-router",
+  "projectName": "portfolio",
+  "typescript": true,
+  "tailwind": true,
+  "git": true,
+  "addOnOptions": {},
+  "packageManager": "pnpm",
+  "install": true,
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "cloudflare",
+    "sentry",
+    "compiler",
+    "shadcn",
+    "t3env",
+    "start",
+    "eslint"
+  ]
+}
