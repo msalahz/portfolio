@@ -13,18 +13,19 @@ The page includes a hero section (implemented) and three highlight sections (pla
 
 ## Components
 
-| Component     | Location                                        | Purpose                                       |
-|---------------|-------------------------------------------------|-----------------------------------------------|
-| HeroHeader    | `features/landing/components/HeroHeader.tsx`    | Navigation bar with logo, links, theme toggle |
-| HeroSection   | `features/landing/components/HeroSection.tsx`   | Main hero content                             |
-| HeroHeadshot  | `features/landing/components/HeroHeadshot.tsx`  | Professional photo                            |
-| SocialLinks   | `features/landing/components/SocialLinks.tsx`   | GitHub, LinkedIn, Upwork icons                |
-| HeroCompanies | `features/landing/components/HeroCompanies.tsx` | Company logos carousel                        |
-| FooterSection | `features/landing/components/FooterSection.tsx` | Page footer                                   |
-| LandingLinks  | `features/landing/components/LandingLinks.tsx`  | Navigation links config                       |
-| AboutSection  | `features/landing/components/AboutSection.tsx`  | About me with values (planned)                |
-| CareerStats   | `features/landing/components/CareerStats.tsx`   | Key metrics display (planned)                 |
-| WorkHistory   | `features/landing/components/WorkHistory.tsx`   | Featured roles showcase (planned)             |
+| Component      | Location                                         | Purpose                                       |
+|----------------|--------------------------------------------------|-----------------------------------------------|
+| HeroHeader     | `features/landing/components/HeroHeader.tsx`     | Navigation bar with logo, links, theme toggle |
+| HeroSection    | `features/landing/components/HeroSection.tsx`    | Main hero content                             |
+| HeroHeadshot   | `features/landing/components/HeroHeadshot.tsx`   | Professional photo                            |
+| SocialLinks    | `features/landing/components/SocialLinks.tsx`    | GitHub, LinkedIn, Upwork icons                |
+| HeroCompanies  | `features/landing/components/HeroCompanies.tsx`  | Company logos carousel                        |
+| FooterSection  | `features/landing/components/FooterSection.tsx`  | Page footer                                   |
+| LandingLinks   | `features/landing/components/LandingLinks.tsx`   | Navigation links config                       |
+| AboutSection   | `features/landing/components/AboutSection.tsx`   | About me with values (planned)                |
+| CareerStats    | `features/landing/components/CareerStats.tsx`    | Key metrics display (planned)                 |
+| WorkHistory    | `features/landing/components/WorkHistory.tsx`    | Featured roles showcase (planned)             |
+| ContactSection | `features/landing/components/ContactSection.tsx` | Contact form and info                         |
 
 ## Hero Content
 
@@ -155,6 +156,45 @@ Showcase 5 most impactful roles with measurable achievements.
 **Display:** Cards or compact list format
 **CTA:** "View all experience" link → `/experience` (future page)
 
+## Contact Section
+
+Two-column layout (stacked on mobile):
+- **Left:** Contact form
+- **Right:** Contact info, social links, Calendly CTA
+
+### Contact Form
+
+**Fields:**
+- Name (required, text input)
+- Email (required, email input with validation)
+- Message (required, textarea)
+
+**Submit Button:** "Send Message"
+
+**Backend:** Resend/SendGrid email API
+- On submit: Send email to hello@devpluscoder.com
+- Success state: Show confirmation message
+- Error state: Show error message with retry option
+
+### Contact Info
+
+- **Email:** hello@devpluscoder.com (mailto link)
+- **Social Links:** LinkedIn, GitHub, Upwork (reuse existing SocialLinks component)
+- **Calendly CTA:** "Schedule a Call" button → https://calendly.com/mohammedzaghloul/1-1-consultation
+
+### Contact Section Acceptance Criteria
+
+- [ ] ContactSection component created
+- [ ] Contact form with Name, Email, Message fields
+- [ ] Form validation (required fields, email format)
+- [ ] Email API integration (Resend/SendGrid)
+- [ ] Success/error states for form submission
+- [ ] Contact info displayed (email, social links)
+- [ ] Calendly "Schedule a Call" button
+- [ ] Dark/light mode works
+- [ ] Mobile responsive
+- [ ] Animations consistent with existing landing page
+
 ## Design Guidelines
 
 - Match existing landing page aesthetic
@@ -190,4 +230,7 @@ Full detail pages planned for future specs:
 - [ ] Upwork credibility stats/badge displayed
 - [ ] Work History section with 5 featured roles and metrics
 - [ ] "Learn more" and "View all experience" links present (can be disabled/placeholder until future pages exist)
+- [ ] Contact Section with form and contact info
+- [ ] Contact form submits to email API
+- [ ] Calendly scheduling link functional
 - [ ] Animations consistent with existing landing page
