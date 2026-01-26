@@ -1,6 +1,8 @@
 {
   "name": "portfolio",
-  "private": true,
+  "version": "0.0.1",
+  "author": "Mohammed Zaghloul <m.salahz86@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3000",
@@ -9,9 +11,12 @@
     "test": "vitest run",
     "deploy": "pnpm run build && wrangler deploy",
     "start": "node --import ./.output/server/instrument.server.mjs .output/server/index.mjs",
-    "lint": "eslint",
-    "format": "prettier",
-    "check": "prettier --write . && eslint --fix"
+    "lint": "eslint src/",
+    "format": "prettier src/",
+    "typecheck": "tsc --noEmit",
+    "check": "prettier --write src/ && eslint --fix src/ && tsc --noEmit",
+    "cf-typegen": "wrangler types",
+    "prepare": "husky"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.13.8",
@@ -39,6 +44,7 @@
   "devDependencies": {
     "@tanstack/devtools-vite": "^0.3.11",
     "@tanstack/eslint-config": "^0.3.0",
+    "@tanstack/eslint-plugin-router": "^1.155.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "@types/node": "^22.10.2",
@@ -46,12 +52,27 @@
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
     "babel-plugin-react-compiler": "^1.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-no-barrel-files": "^1.2.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "husky": "^9.1.7",
     "jsdom": "^27.0.0",
     "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "^5.7.2",
     "vite": "^7.1.7",
     "vitest": "^3.0.5",
     "web-vitals": "^5.1.0",
     "wrangler": "^4.40.3"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@sentry/cli",
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
+    ]
   }
 }

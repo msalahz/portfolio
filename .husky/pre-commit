@@ -1,0 +1,4 @@
+pnpm check
+
+# Refresh the index so any changes made by Prettier/ESLint are re-staged
+git update-index --again
