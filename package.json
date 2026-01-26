@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.13.8",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@radix-ui/react-slot": "^1.2.4",
     "@sentry/tanstackstart-react": "^10.22.0",
     "@t3-oss/env-core": "^0.13.8",
     "@tailwindcss/vite": "^4.0.6",
@@ -35,6 +37,7 @@
     "lucide-react": "^0.561.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "shadcn": "^3.7.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.6",
     "tw-animate-css": "^1.3.6",
