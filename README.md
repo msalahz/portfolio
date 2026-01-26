@@ -1,6 +1,9 @@
-Welcome to your new TanStack app! 
+# Mohammed Zaghloul Portfolio | devpluscoder.com
+A modern fullstack React application built with TanStack Start, TypeScript, and Tailwind CSS.
 
-# Getting Started
+# Development Environment Setup
+
+## Getting Started
 
 To run this application:
 
@@ -101,7 +104,7 @@ More information on the `Link` component can be found in the [Link documentation
 
 ### Using A Layout
 
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
+In the File Based Routing set up the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
 
 Here is an example layout that includes a header:
 
@@ -127,7 +130,7 @@ export const Route = createRootRoute({
 })
 ```
 
-The `<TanStackRouterDevtools />` component is not required so you can remove it if you don't want it in your layout.
+The `<TanStackRouterDevtools />` component is not required, so you can remove it if you don't want it in your layout.
 
 More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
 
@@ -325,4 +328,4 @@ Files prefixed with `demo` can be safely deleted. They are there to provide a st
 
 # Learn More
 
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
+You can learn more about all the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
