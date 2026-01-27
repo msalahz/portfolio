@@ -22,6 +22,7 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 - Monitoring: Cloudflare Analytics
 - Error Tracking: Sentry
 - Component Library: Shadcn UI
+- AI Agents: GitHub Copilot & Claude AI
 
 
 # Build and test commands
