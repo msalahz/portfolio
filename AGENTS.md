@@ -21,6 +21,7 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 - Environment Variables: t3-env
 - Monitoring: Cloudflare Analytics
 - Error Tracking: Sentry
+- Component Library: Shadcn UI
 
 
 # Build and test commands
