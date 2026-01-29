@@ -21,7 +21,6 @@ export default [
       '@typescript-eslint/no-unnecessary-condition': 'off',
     },
   },
-  ...pluginQuery.configs['flat/recommended'],
   ...pluginRouter.configs['flat/recommended'],
   noBarrelFiles.flat,
   prettierConfig,

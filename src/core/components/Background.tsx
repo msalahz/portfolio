@@ -36,7 +36,7 @@ interface RippleConfig {
 
 export function Background() {
   // Generate raindrops with deterministic values
-  const raindrops = useMemo<Raindrop[]>(() => {
+  const raindrops = useMemo<Array<Raindrop>>(() => {
     return Array.from({ length: 80 }, (_, i) => ({
       id: i,
       left: seededRandom(i * 1.1) * 100,
@@ -48,7 +48,7 @@ export function Background() {
   }, [])
 
   // Generate water droplets that slide down the glass
-  const waterDroplets = useMemo<WaterDroplet[]>(() => {
+  const waterDroplets = useMemo<Array<WaterDroplet>>(() => {
     return Array.from({ length: 25 }, (_, i) => ({
       id: i,
       left: seededRandom(i * 6.6) * 100,
@@ -61,7 +61,7 @@ export function Background() {
   }, [])
 
   // Generate ripple effects for where drops hit
-  const ripples = useMemo<RippleConfig[]>(() => {
+  const ripples = useMemo<Array<RippleConfig>>(() => {
     return Array.from({ length: 12 }, (_, i) => ({
       id: i,
       left: 5 + seededRandom(i * 12.3) * 90,
