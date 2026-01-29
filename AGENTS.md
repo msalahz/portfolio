@@ -3,7 +3,7 @@
 DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent software developer and consultant with over 12 years of experience. The site showcases his expertise in building end-to-end web solutions that deliver measurable business impact, from MVPs to enterprise platforms.
 
 
-# Techs tack
+# Tech stack
 
 - Framework: TanStack Start
 - Language: TypeScript
@@ -22,7 +22,7 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 - Monitoring: Cloudflare Analytics
 - Error Tracking: Sentry
 - Component Library: Shadcn UI
-- AI Agents: GitHub Copilot & Claude AI
+- AI Agents: GitHub Copilot & Junie & Claude AI
 
 
 # Build and test commands
