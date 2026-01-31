@@ -1,6 +1,6 @@
-import { createContext } from 'react'
 import { Store } from '@tanstack/react-store'
 import { I18nextProvider } from 'react-i18next'
+import { createContext, useState } from 'react'
 
 import type { Language } from '@/core/schemas'
 
@@ -17,10 +17,10 @@ export interface LanguageProviderProps extends React.ComponentProps<typeof I18ne
 
 export function LanguageProvider({ initialLanguage, i18n, ...props }: LanguageProviderProps) {
   if (i18n.language !== initialLanguage) {
-    !i18n.changeLanguage(initialLanguage)
+    void i18n.changeLanguage(initialLanguage)
   }
 
-  const store = new Store<LanguageStoreState>({ language: initialLanguage })
+  const [store] = useState(() => new Store<LanguageStoreState>({ language: initialLanguage }))
 
   return (
     <LanguageContext.Provider value={store}>
