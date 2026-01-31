@@ -37,7 +37,6 @@ const CAREER_STATS: Array<React.ComponentProps<typeof Stat>> = [
 
 const UPWORK_STATS: Array<React.ComponentProps<typeof Stat>> = [
   { to: 100, prefix: '+', postfix: '%', duration: 3, label: 'Job Success' },
-  { to: 200, prefix: '+', postfix: 'K', duration: 3, label: 'Total Earnings' },
   { to: 5427, duration: 3, label: 'Worked Hours' },
   { to: 40, duration: 3, label: 'Jobs Completed' },
 ]
