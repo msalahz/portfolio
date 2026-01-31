@@ -1,11 +1,28 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
+import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
+import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/react-router'
 
 import appCss from '../styles.css?url'
-import { NotFound } from '@/core/components/NotFound'
 
-export const Route = createRootRoute({
+import type { QueryClient } from '@tanstack/query-core'
+
+import { envClient } from '@/env.client'
+import { NotFound } from '@/core/components/NotFound'
+import TanStackQueryDevtools from '@/integrations/tanstack-query/devtools'
+
+interface MyRouterContext {
+  queryClient: QueryClient
+}
+
+export const Route = createRootRouteWithContext<MyRouterContext>()({
+  shellComponent: RootDocument,
+  notFoundComponent: () => {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <NotFound />
+      </div>
+    )
+  },
   head: () => ({
     meta: [
       { charSet: 'utf-8' },
@@ -19,15 +36,6 @@ export const Route = createRootRoute({
       { rel: 'stylesheet', href: appCss },
     ],
   }),
-
-  shellComponent: RootDocument,
-  notFoundComponent: () => {
-    return (
-      <div className="flex min-h-screen flex-col">
-        <NotFound />
-      </div>
-    )
-  },
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -38,17 +46,15 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body suppressHydrationWarning>
         {children}
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        />
+        {envClient.VITE_ENABLE_TANSTACK_DEVTOOLS === 'true' ? (
+          <TanStackDevtools
+            config={{ position: 'bottom-right', theme: 'light' }}
+            plugins={[
+              { name: 'TanStack Router', render: <TanStackRouterDevtoolsPanel /> },
+              TanStackQueryDevtools,
+            ]}
+          />
+        ) : null}
         <Scripts />
       </body>
     </html>
