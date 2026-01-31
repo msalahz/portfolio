@@ -27,7 +27,7 @@ export function useLanguage() {
   const setLanguage = (newLanguage: Language) => {
     mutate({ data: newLanguage })
     store.setState((state) => ({ ...state, language: newLanguage }))
-    !i18n.changeLanguage(newLanguage)
+    void i18n.changeLanguage(newLanguage)
   }
 
   return {

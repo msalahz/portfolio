@@ -22,8 +22,8 @@ import TanStackQueryDevtools from '@/integrations/tanstack-query/devtools'
 
 interface MyRouterContext {
   i18n: i18n
-  initialTheme: Theme | null
-  initialLanguage: Language | null
+  initialTheme: Theme
+  initialLanguage: Language
   queryClient: QueryClient
 }
 
