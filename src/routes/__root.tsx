@@ -84,7 +84,6 @@ function RootDocumentContent({ children }: { children: React.ReactNode }) {
   return (
     <html lang={i18n.language} dir={i18n.dir(i18n.language)}>
       <head>
-        <meta rel="icon" />
         <HeadContent />
       </head>
       <body suppressHydrationWarning className={cn(theme)}>
