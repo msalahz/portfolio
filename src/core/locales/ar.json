@@ -1,9 +1,7 @@
 {
   "Test": "تجربة",
-  "notFound": {
-    "title": "404",
-    "heading": "الصفحة غير موجودة",
-    "description": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
-    "goHome": "العودة للرئيسية"
-  }
+  "404": "404",
+  "Page Not Found": "الصفحة غير موجودة",
+  "The page you're looking for doesn't exist or has been moved.": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+  "Go Home": "العودة للرئيسية"
 }

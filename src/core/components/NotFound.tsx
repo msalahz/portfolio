@@ -12,12 +12,14 @@ export function NotFound({ className, ...props }: React.ComponentProps<'div'>) {
       {...props}
     >
       <div className="text-center">
-        <h1 className="text-primary text-9xl font-bold">{t('notFound.title')}</h1>
-        <p className="text-muted-foreground mt-4 text-2xl font-semibold">{t('notFound.heading')}</p>
-        <p className="text-muted-foreground mt-2 text-lg">{t('notFound.description')}</p>
+        <h1 className="text-primary text-9xl font-bold">{t('404')}</h1>
+        <p className="text-muted-foreground mt-4 text-2xl font-semibold">{t('Page Not Found')}</p>
+        <p className="text-muted-foreground mt-2 text-lg">
+          {t("The page you're looking for doesn't exist or has been moved.")}
+        </p>
         <Button asChild size="lg" className="mt-8">
           <Link to="/">
-            <span>{t('notFound.goHome')}</span>
+            <span>{t('Go Home')}</span>
           </Link>
         </Button>
       </div>
