@@ -1,5 +1,3 @@
-export PNPM_HOME="/home/runner/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 pnpm check
 
 # Refresh the index so any changes made by Prettier/ESLint are re-staged
