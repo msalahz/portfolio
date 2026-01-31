@@ -1,5 +1,5 @@
-import { createContext } from 'react'
 import { Store } from '@tanstack/react-store'
+import { createContext, useState } from 'react'
 
 import type { Theme } from '@/core/schemas'
 
@@ -15,7 +15,7 @@ export interface ThemeProviderProps {
 }
 
 export function ThemeProvider({ initialTheme, children }: ThemeProviderProps) {
-  const store = new Store<ThemeStoreState>({ theme: initialTheme })
+  const [store] = useState(() => new Store<ThemeStoreState>({ theme: initialTheme }))
 
   return <ThemeContext.Provider value={store}>{children}</ThemeContext.Provider>
 }
