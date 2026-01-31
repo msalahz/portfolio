@@ -13,7 +13,7 @@
     "start": "node --import ./.output/server/instrument.server.mjs .output/server/index.mjs",
     "lint": "eslint src/",
     "format": "prettier src/",
-    "format:check": "prettier --check .",
+    "format:check": "prettier --check src/",
     "typecheck": "tsc --noEmit",
     "check": "prettier --write src/ && eslint --fix src/ && tsc --noEmit",
     "cf-typegen": "wrangler types",
