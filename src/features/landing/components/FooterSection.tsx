@@ -5,7 +5,7 @@ import { SocialLinks } from '@/features/landing/components/SocialLinks'
 
 export function FooterSection() {
   return (
-    <footer className="bg-secondary/10 py-16 md:py-32">
+    <footer className="py-16 md:py-32">
       <div className="mx-auto max-w-5xl px-6">
         <Link to="/" aria-label="go home" className="mx-auto block size-fit">
           <Logo />

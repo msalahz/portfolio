@@ -26,7 +26,7 @@ const CORE_VALUES: Array<{ icon: React.ElementType; title: string; description: 
 
 export function AboutSection({ className, ...props }: React.ComponentProps<'section'>) {
   return (
-    <section id="about" className={cn('bg-secondary/10 py-16 md:py-32', className)} {...props}>
+    <section id="about" className={cn('py-16 md:py-50', className)} {...props}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-6 md:grid-cols-2 md:gap-12">
           <div className="flex flex-col gap-5 text-balance">
