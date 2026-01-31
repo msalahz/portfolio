@@ -10,6 +10,7 @@
     "cssVariables": true,
     "prefix": ""
   },
+  "iconLibrary": "lucide",
   "aliases": {
     "components": "@/integrations/shadcn/components",
     "utils": "@/integrations/shadcn/lib/utils",
@@ -17,5 +18,7 @@
     "lib": "@/integrations/shadcn/lib",
     "hooks": "@/integrations/shadcn/hooks"
   },
-  "iconLibrary": "lucide"
+  "registries": {
+    "@tailark": "https://tailark.com/r/{name}.json"
+  }
 }
