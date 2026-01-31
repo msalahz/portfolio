@@ -10,6 +10,7 @@ export const envClient = createEnv({
 
   client: {
     VITE_ENABLE_TANSTACK_DEVTOOLS: booleanStringSchema.default('false'),
+    VITE_ENABLE_I18N_DEBUG: booleanStringSchema.default('false'),
   },
 
   /**

@@ -4,16 +4,20 @@ import * as Sentry from '@sentry/tanstackstart-react'
 
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
+import { getI18n } from '@/integrations/i18n/i18next'
 import * as TanstackQuery from '@/integrations/tanstack-query/rootProvider'
 
 // Create a new router instance
 export const getRouter = () => {
+  const i18n = getI18n()
   const rqContext = TanstackQuery.getContext()
 
   const router = createRouter({
     routeTree,
     context: {
+      i18n,
       initialTheme: null,
+      initialLanguage: null,
       ...rqContext,
     },
 
