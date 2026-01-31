@@ -1,3 +1,17 @@
 import { z } from 'zod'
+import type { setCookie } from '@tanstack/react-start/server'
 
 export const booleanStringSchema = z.union([z.literal('true'), z.literal('false')])
+
+export const COOKIE_OPTIONS: Parameters<typeof setCookie>[2] = {
+  path: '/',
+  maxAge: 365 * 24 * 60 * 60, // 1 year
+  secure: true,
+  httpOnly: true,
+  sameSite: 'lax',
+}
+
+export const THEME_DEFAULT = 'dark'
+export const THEME_COOKIE_NAME = 'theme'
+export const themeSchema = z.union([z.literal('light'), z.literal('dark')])
+export type Theme = z.infer<typeof themeSchema>

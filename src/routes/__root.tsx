@@ -5,16 +5,27 @@ import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/reac
 import appCss from '../styles.css?url'
 
 import type { QueryClient } from '@tanstack/query-core'
+import type { Theme } from '@/core/schemas'
 
 import { envClient } from '@/env.client'
+import { useTheme } from '@/core/theme/useTheme'
+import { cn } from '@/integrations/shadcn/lib/utils'
 import { NotFound } from '@/core/components/NotFound'
+import { ThemeProvider } from '@/core/theme/ThemeProvider'
+import { getInitialPreferencesFn } from '@/backend/preferences/queries'
 import TanStackQueryDevtools from '@/integrations/tanstack-query/devtools'
 
 interface MyRouterContext {
+  initialTheme: Theme | null
   queryClient: QueryClient
 }
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
+  async beforeLoad() {
+    const { initialTheme } = await getInitialPreferencesFn()
+    return { initialTheme }
+  },
+
   shellComponent: RootDocument,
   notFoundComponent: () => {
     return (
@@ -39,22 +50,35 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const { initialTheme } = Route.useRouteContext()
+
   return (
-    <html lang="en" className="light">
+    <ThemeProvider initialTheme={initialTheme}>
+      <RootDocumentContent>{children}</RootDocumentContent>
+      {envClient.VITE_ENABLE_TANSTACK_DEVTOOLS === 'true' ? (
+        <TanStackDevtools
+          config={{ position: 'bottom-right', theme: 'light' }}
+          plugins={[
+            { name: 'TanStack Router', render: <TanStackRouterDevtoolsPanel /> },
+            TanStackQueryDevtools,
+          ]}
+        />
+      ) : null}
+    </ThemeProvider>
+  )
+}
+
+function RootDocumentContent({ children }: { children: React.ReactNode }) {
+  const { theme } = useTheme()
+
+  return (
+    <html>
       <head>
+        <meta rel="icon" />
         <HeadContent />
       </head>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className={cn(theme)}>
         {children}
-        {envClient.VITE_ENABLE_TANSTACK_DEVTOOLS === 'true' ? (
-          <TanStackDevtools
-            config={{ position: 'bottom-right', theme: 'light' }}
-            plugins={[
-              { name: 'TanStack Router', render: <TanStackRouterDevtoolsPanel /> },
-              TanStackQueryDevtools,
-            ]}
-          />
-        ) : null}
         <Scripts />
       </body>
     </html>
