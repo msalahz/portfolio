@@ -75,6 +75,7 @@ export function StatsSection({ className, ...props }: React.ComponentProps<'sect
                     src="/companies/upwork.svg"
                     alt="Upwork"
                     className="inline-block h-8 dark:invert"
+                    loading="lazy"
                   />
                   <span>Stats</span>
                 </div>
@@ -84,6 +85,7 @@ export function StatsSection({ className, ...props }: React.ComponentProps<'sect
                     src="/icons/upwork-top-rated-plus.svg"
                     alt="Upwork Top Rated Plus"
                     className="inline-block h-8"
+                    loading="lazy"
                   />
                   <span className="text-2xl font-medium">Top Rated Plus</span>
                 </div>

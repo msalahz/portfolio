@@ -28,6 +28,7 @@ export function HeroCompanies({ className, ...props }: React.ComponentProps<'sec
               className="h-7 w-fit dark:invert"
               height="30"
               width="auto"
+              loading="lazy"
               src={company.src}
               alt={company.alt}
             />
