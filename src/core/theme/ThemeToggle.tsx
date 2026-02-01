@@ -7,7 +7,7 @@ import { Button } from '@/integrations/shadcn/components/ui/button'
 import { useTheme } from '@/core/theme/useTheme'
 
 export function ThemeToggleIcon({ theme }: { theme: Theme }) {
-  return theme === 'dark' ? <MoonIcon /> : <SunIcon />
+  return theme === 'dark' ? <MoonIcon id="MoonIcon" /> : <SunIcon id="SunIcon" />
 }
 
 export interface ThemeToggleButtonProps extends Omit<
