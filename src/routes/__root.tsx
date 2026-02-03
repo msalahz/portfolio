@@ -19,6 +19,8 @@ import { ThemeProvider } from '@/core/theme/ThemeProvider'
 import { LanguageProvider } from '@/integrations/i18n/LanguageProvider'
 import { getInitialPreferencesFn } from '@/backend/preferences/queries'
 import TanStackQueryDevtools from '@/integrations/tanstack-query/devtools'
+import { HeroHeader } from '@/features/landing/components/HeroHeader'
+import { FooterSection } from '@/features/landing/components/FooterSection'
 
 interface MyRouterContext {
   i18n: i18n
@@ -37,7 +39,9 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   notFoundComponent: () => {
     return (
       <div className="flex min-h-screen flex-col">
+        <HeroHeader />
         <NotFound />
+        <FooterSection />
       </div>
     )
   },
