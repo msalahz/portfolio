@@ -10,6 +10,7 @@ export function HeroHeader() {
   const [menuState, setMenuState] = useState(false)
   return (
     <header>
+      <span className="scroll-progress-indicator" />
       <nav
         data-state={menuState && 'active'}
         className="fixed z-20 w-full border-b border-dashed bg-white backdrop-blur md:relative dark:bg-zinc-950/50 lg:dark:bg-transparent"
