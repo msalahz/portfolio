@@ -133,6 +133,10 @@ code {
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+@utility slide-up-blur-in {
+  @apply animate-in slide-in-from-bottom-15 blur-in fill-mode-backwards duration-1000 ease-out;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
