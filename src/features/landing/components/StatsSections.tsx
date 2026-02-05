@@ -1,26 +1,24 @@
 import { cn } from '@/integrations/shadcn/lib/utils'
 
 function Stat({
-  to,
-  duration,
+  num,
   prefix = '',
   postfix = '',
   label = '',
   enabled = false,
   ...props
 }: React.ComponentProps<'div'> & {
-  to: number
+  num: number
   prefix?: string
   postfix?: string
   label?: string
-  duration?: number
   enabled?: boolean
 }) {
   return (
     <div className={cn('space-y-4')} {...props}>
       <div className="flex items-center bg-linear-to-r from-zinc-950 to-zinc-600 bg-clip-text text-5xl font-bold text-transparent dark:from-white dark:to-zinc-800">
         {prefix}
-        {to}
+        {num}
         {postfix}
       </div>
       <p>{label}</p>
@@ -29,16 +27,16 @@ function Stat({
 }
 
 const CAREER_STATS: Array<React.ComponentProps<typeof Stat>> = [
-  { to: 12, prefix: '+', duration: 2, label: 'Years of Experience' },
-  { to: 100, prefix: '+', duration: 3, label: 'Projects Completed' },
-  { to: 75, prefix: '+', duration: 3, label: 'Satisfied Clients' },
-  { to: 45, prefix: '+', duration: 3, label: 'Skills & Technologies' },
+  { num: 12, prefix: '+', label: 'Years of Experience' },
+  { num: 100, prefix: '+', label: 'Projects Completed' },
+  { num: 75, prefix: '+', label: 'Satisfied Clients' },
+  { num: 45, prefix: '+', label: 'Skills & Technologies' },
 ]
 
 const UPWORK_STATS: Array<React.ComponentProps<typeof Stat>> = [
-  { to: 100, prefix: '+', postfix: '%', duration: 3, label: 'Job Success' },
-  { to: 5427, duration: 3, label: 'Worked Hours' },
-  { to: 40, duration: 3, label: 'Jobs Completed' },
+  { num: 100, prefix: '+', postfix: '%', label: 'Job Success' },
+  { num: 5427, label: 'Worked Hours' },
+  { num: 40, label: 'Jobs Completed' },
 ]
 
 export function StatsSection({ className, ...props }: React.ComponentProps<'section'>) {
@@ -50,13 +48,7 @@ export function StatsSection({ className, ...props }: React.ComponentProps<'sect
             <h2 className="text-2xl font-medium lg:text-3xl">Career Stats</h2>
             <div className="mt-12 mb-12 grid grid-cols-2 gap-6 lg:mb-0">
               {CAREER_STATS.map((stat) => (
-                <Stat
-                  key={stat.label}
-                  to={stat.to}
-                  label={stat.label}
-                  prefix={stat.prefix}
-                  duration={stat.duration}
-                />
+                <Stat key={stat.label} num={stat.num} label={stat.label} prefix={stat.prefix} />
               ))}
             </div>
           </div>
@@ -79,28 +71,31 @@ export function StatsSection({ className, ...props }: React.ComponentProps<'sect
                   />
                   <span>Stats</span>
                 </div>
-
-                <div className="flex items-center gap-1">
-                  <img
-                    src="/icons/upwork-top-rated-plus.svg"
-                    alt="Upwork Top Rated Plus"
-                    className="inline-block h-8"
-                    loading="lazy"
-                  />
-                  <span className="text-2xl font-medium">Top Rated Plus</span>
-                </div>
               </h2>
               <div className="mt-12 mb-12 grid grid-cols-2 gap-6 lg:mb-0">
                 {UPWORK_STATS.map((stat) => (
                   <Stat
                     key={stat.label}
-                    to={stat.to}
+                    num={stat.num}
                     label={stat.label}
                     prefix={stat.prefix}
                     postfix={stat.postfix}
-                    duration={stat.duration}
                   />
                 ))}
+                <div className={cn('space-y-4')}>
+                  <div className="flex h-12 items-center gap-1">
+                    <img
+                      src="/icons/upwork-top-rated-plus.svg"
+                      alt="Upwork Top Rated Plus"
+                      className="inline-block h-9"
+                      loading="lazy"
+                    />
+                    <span className="flex items-center bg-linear-to-r from-zinc-950 to-zinc-600 bg-clip-text text-2xl font-bold text-transparent dark:from-white dark:to-zinc-600">
+                      Top Rated Plus
+                    </span>
+                  </div>
+                  <p>Badges</p>
+                </div>
               </div>
             </div>
           </a>
