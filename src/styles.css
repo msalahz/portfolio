@@ -204,5 +204,70 @@ code {
       --num: var(--target, 100);
     }
   }
-  /* Animated Num */
+
+  /* Marquee */
+  @property --marquee-duration {
+    syntax: '<time>';
+    initial-value: 40s;
+    inherits: false;
+  }
+  @property --marquee-gap {
+    syntax: '<length>';
+    initial-value: 5rem;
+    inherits: false;
+  }
+
+  .marquee-container {
+    display: flex;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 95%, transparent);
+  }
+
+  .marquee-container.marquee-vertical {
+    flex-direction: column;
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 95%, transparent);
+  }
+
+  .marquee-content {
+    display: flex;
+    animation: marquee var(--marquee-duration) linear infinite;
+  }
+
+  .marquee-vertical .marquee-content {
+    flex-direction: column;
+    animation-name: marquee-vertical;
+  }
+
+  .marquee-reverse {
+    animation-direction: reverse;
+  }
+
+  .marquee-pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-items {
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--marquee-gap);
+    padding-inline-start: var(--marquee-gap);
+  }
+
+  .marquee-vertical .marquee-items {
+    flex-direction: column;
+    padding-inline-start: 0;
+    padding-block-start: var(--marquee-gap);
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translateX(calc(-50%));
+    }
+  }
+
+  @keyframes marquee-vertical {
+    to {
+      transform: translateY(calc(-50%));
+    }
+  }
 }
