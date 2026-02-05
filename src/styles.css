@@ -166,4 +166,39 @@ code {
     animation: grow-progress linear forwards;
     animation-timeline: scroll();
   }
+
+  /* Animated Num */
+  @property --target {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+  }
+
+  @property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+  }
+
+  .animated-num {
+    counter-reset: num var(--num);
+  }
+
+  .animated-num.in-view {
+    animation: counter 1s ease-out forwards;
+  }
+
+  .animated-num::after {
+    content: counter(num);
+  }
+
+  @keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: var(--target, 100);
+    }
+  }
+  /* Animated Num */
 }

@@ -1,24 +1,23 @@
 import { cn } from '@/integrations/shadcn/lib/utils'
+import { AnimatedNum } from '@/core/components/AnimatedNum'
 
 function Stat({
   num,
   prefix = '',
   postfix = '',
   label = '',
-  enabled = false,
   ...props
 }: React.ComponentProps<'div'> & {
   num: number
   prefix?: string
   postfix?: string
   label?: string
-  enabled?: boolean
 }) {
   return (
     <div className={cn('space-y-4')} {...props}>
       <div className="flex items-center bg-linear-to-r from-zinc-950 to-zinc-600 bg-clip-text text-5xl font-bold text-transparent dark:from-white dark:to-zinc-800">
         {prefix}
-        {num}
+        <AnimatedNum whileInView value={num} />
         {postfix}
       </div>
       <p>{label}</p>
