@@ -7,7 +7,7 @@ const HERO_COMPANIES: Array<React.ComponentProps<'img'> & { height: string }> = 
   { src: '/companies/leadliaison.svg', alt: 'Leadliaison Logo', height: cn('h-6') },
   { src: '/companies/bloowatch.svg', alt: 'Bloowatch Logo', height: cn('h-5') },
   {
-    src: '/companies/ark-knoledge-network.svg',
+    src: '/companies/ark-knowledge-networks.svg',
     alt: 'ARK Knowledge Network Logo',
     height: cn('h-5'),
   },
