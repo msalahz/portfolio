@@ -1,0 +1,136 @@
+[
+  {
+    "company": "Ark Knowledge Networks",
+    "logo": "/companies/ark-knowledge-networks.svg",
+    "role": "Lead Full-Stack Developer",
+    "startDate": "Aug 2025",
+    "endDate": "Nov 2025",
+    "project": {
+      "name": "Qarib",
+      "url": "qarib.arknetworks.ai",
+      "description": "AI-Powered Media bilingual transcript management platform"
+    },
+    "achievements": [
+      "Crafted and executed a solid eight-week MVP plan to meet tight deadlines.",
+      "Built a production-grade bilingual web application with full RTL/LTR support."
+    ],
+    "technologies": ["Typescript", "React", "Node.js", "Fastify", "PostgreSQL", "Docker"]
+  },
+  {
+    "company": "Bloowatch",
+    "logo": "/companies/bloowatch.svg",
+    "role": "Senior Software Consultant",
+    "startDate": "Jul 2023",
+    "endDate": "Aug 2025",
+    "project": {
+      "name": "Bloowatch",
+      "url": "app.bloowatch.com",
+      "description": "Management solution and e-commerce system for watersports & outdoor centers"
+    },
+    "achievements": [
+      "Engineering the complete, ground-up reimplementation of the B2B2C e-commerce system as a modular widget.",
+      "Increased frontend development speed by 45% by implementing a smooth migration plan from Ember to React."
+    ],
+    "technologies": ["Typescript", "React", "Next.js", "PostgreSQL", "Azure", "Vercel", "Sentry"]
+  },
+  {
+    "company": "Plenty",
+    "logo": "/companies/plenty.svg",
+    "role": "Senior Full-Stack Engineer",
+    "startDate": "Dec 2023",
+    "endDate": "Oct 2024",
+    "project": {
+      "name": "FarmOS",
+      "url": "farmos.plenty.tools",
+      "description": "Farm management and planning tool for growing indoors vertical farms"
+    },
+    "achievements": [
+      "Led the design and implementation of an intuitive user interface for the Strawberry farm's management system.",
+      "Reduced E2E test time by 23% by integrating Playwright E2E testing.",
+      "Achieved on-time delivery by 95% by proactively addressing potential blockers before they impacted deadlines."
+    ],
+    "technologies": ["Typescript", "React", "Python", "Flask", "PostgreSQL", "AWS", "DataDog"]
+  },
+  {
+    "company": "Lead Liaison",
+    "logo": "/companies/leadliaison.svg",
+    "role": "Senior Software Consultant",
+    "startDate": "Apr 2022",
+    "endDate": "Mar 2024",
+    "project": {
+      "name": "Player Profile",
+      "url": "go.play.captello.com",
+      "description": "Engage & Reward Customers with Games for Marketing & Events"
+    },
+    "achievements": [
+      "Facilitated the growth of team members to senior level by setting specific career goals, providing targeted training, and regularly tracking progress, resulting in a noticeable increase in skill proficiency.",
+      "Fostered a safe environment for the team by promoting open communication, respect, and collaboration."
+    ],
+    "technologies": ["Typescript", "React", "Next.js", "AWS", "Sentry"]
+  },
+  {
+    "company": "Diwala",
+    "logo": "/companies/diwala.svg",
+    "role": "Senior Full-Stack Engineer",
+    "startDate": "Mar 2022",
+    "endDate": "Nov 2023",
+    "project": {
+      "name": "Diwala Cred",
+      "url": "cred.diwala.io",
+      "description": "Decentralized Web3 platform for issue, share, and verify digital credentials"
+    },
+    "achievements": [
+      "Decreased process cycle time by 40% by reducing client issuance flow steps.",
+      "Cut support queries by 50% by automating student account creation during credential issuance.",
+      "Empowered clients with seamless, error-free data integration for scalable operations by building API integration that supports bulk issuance for thousands of credentials."
+    ],
+    "technologies": [
+      "Typescript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Fastify",
+      "Nest.js",
+      "Express.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Firebase",
+      "GCP"
+    ]
+  },
+  {
+    "company": "Lead Liaison",
+    "logo": "/companies/leadliaison.svg",
+    "role": "Lead Frontend Developer",
+    "startDate": "Apr 2020",
+    "endDate": "Mar 2022",
+    "project": {
+      "name": "Event Gen",
+      "url": "events.captello.com",
+      "description": "Event management & CRM web application"
+    },
+    "achievements": [
+      "Modernized the tech stack and boosted dev speed by 30% by transitioning from PHP to React web apps.",
+      "Minimized technical debt and maintenance costs through the implementation of maintainable architecture and proactive management of application dependencies, resulting in enhanced system reliability."
+    ],
+    "technologies": ["Typescript", "React", "Next.js", "AWS", "Sentry"]
+  },
+  {
+    "company": "Genesys",
+    "logo": "/companies/genesys.svg",
+    "role": "Lead Frontend Engineer",
+    "startDate": "Mar 2019",
+    "endDate": "Dec 2021",
+    "project": {
+      "name": "Rich Messages Authoring Tool",
+      "url": null,
+      "description": "Authoring rich messages web tool for Genesys users"
+    },
+    "achievements": [
+      "Shortened rich messaging authoring time by 75% by building an intuitive forms and JSON editor.",
+      "Streamlined message creation by enabling 10x faster, error-free JSON message creation via intuitive forms.",
+      "Diminished technical debt by 27% by leading large-scale upgrades and refactoring for obsolete dependencies."
+    ],
+    "technologies": ["Typescript", "Vue.js", "JSON Schema", "Ajv", "AWS", "Jenkins"]
+  }
+]

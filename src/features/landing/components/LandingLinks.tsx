@@ -4,7 +4,7 @@ import { cn } from '@/integrations/shadcn/lib/utils'
 const links = [
   { name: 'About', href: '/#about' },
   { name: 'Stats', href: '/#stats' },
-  { name: 'Contact', href: 'mailto:hello@devpluscoder.com' },
+  { name: 'Work', href: '/#work' },
 ]
 
 export function LandingLinks({ className, ...props }: React.ComponentProps<'ul'>) {
@@ -15,7 +15,6 @@ export function LandingLinks({ className, ...props }: React.ComponentProps<'ul'>
           <Link
             key={item.name}
             to={item.href}
-            rel={item.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
             aria-label={item.name}
             className="text-muted-foreground hover:text-accent-foreground block duration-150"
           >
