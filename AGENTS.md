@@ -41,6 +41,7 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 
 - For business context, refer to `docs/business/`.
 - For specifications, refer to `docs/specs/`.
+- For project exploration comprehensive base summary, refer to `docs/business/exploration-summary.md`.
 
 
 # Security considerations
