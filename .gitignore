@@ -15,3 +15,5 @@ todos.json
 .tanstack/*
 docs/private/*
 run/*
+.playwright-cli/*
+.playwright/*
