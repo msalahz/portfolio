@@ -41,7 +41,7 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 
 - For business context, refer to `docs/business/`.
 - For specifications, refer to `docs/specs/`.
-- For project exploration comprehensive base summary, refer to `docs/business/project-comprehensive-summary.md`.
+- For  project code analysis and exploration for the codebase structure, refer to `docs/code-analysis/*.md`.
 
 
 # Security considerations
@@ -53,3 +53,17 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 - Regularly audit code for security best practices.
 - Use GitHub Actions secrets to manage sensitive information in CI/CD pipelines.
 - Monitor site traffic for unusual activity that may indicate a security breach.
+
+# Instructions
+
+- Keep track of project code analysis and exploration for the codebase structure as Markdown file on 
+  `docs/code-analysis/*.md` directory.
+
+# Code preferences
+
+- Always use TypeScript for type safety and better developer experience.
+- Follow the DRY (Don't Repeat Yourself) principle to avoid code duplication.
+- Use functional components and hooks in React for better readability and maintainability.
+- UI components should be stateless (data-down - action-up) and reusable, with state management handled at a higher 
+  level when necessary.
+- Use Tailwind CSS for styling to maintain consistency and speed up development.
