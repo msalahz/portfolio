@@ -137,6 +137,15 @@ code {
   @apply animate-in slide-in-from-bottom-15 blur-in fill-mode-backwards duration-1000 ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .slide-up-blur-in {
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

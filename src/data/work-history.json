@@ -10,6 +10,14 @@
       "url": "qarib.arknetworks.ai",
       "description": "AI-Powered Media bilingual transcript management platform"
     },
+    "keyMetric": {
+      "value": "8-Week",
+      "label": "MVP Delivered"
+    },
+    "gradient": {
+      "from": "oklch(0.65 0.15 250)",
+      "to": "oklch(0.55 0.20 280)"
+    },
     "achievements": [
       "Crafted and executed a solid eight-week MVP plan to meet tight deadlines.",
       "Built a production-grade bilingual web application with full RTL/LTR support."
@@ -27,6 +35,14 @@
       "url": "app.bloowatch.com",
       "description": "Management solution and e-commerce system for watersports & outdoor centers"
     },
+    "keyMetric": {
+      "value": "45%",
+      "label": "Faster Dev Speed"
+    },
+    "gradient": {
+      "from": "oklch(0.60 0.18 200)",
+      "to": "oklch(0.50 0.15 230)"
+    },
     "achievements": [
       "Engineering the complete, ground-up reimplementation of the B2B2C e-commerce system as a modular widget.",
       "Increased frontend development speed by 45% by implementing a smooth migration plan from Ember to React."
@@ -43,6 +59,14 @@
       "name": "FarmOS",
       "url": "farmos.plenty.tools",
       "description": "Farm management and planning tool for growing indoors vertical farms"
+    },
+    "keyMetric": {
+      "value": "95%",
+      "label": "On-Time Delivery"
+    },
+    "gradient": {
+      "from": "oklch(0.65 0.20 145)",
+      "to": "oklch(0.55 0.15 170)"
     },
     "achievements": [
       "Led the design and implementation of an intuitive user interface for the Strawberry farm's management system.",
@@ -62,6 +86,14 @@
       "url": "go.play.captello.com",
       "description": "Engage & Reward Customers with Games for Marketing & Events"
     },
+    "keyMetric": {
+      "value": "Senior",
+      "label": "Team Growth"
+    },
+    "gradient": {
+      "from": "oklch(0.60 0.18 30)",
+      "to": "oklch(0.55 0.22 50)"
+    },
     "achievements": [
       "Facilitated the growth of team members to senior level by setting specific career goals, providing targeted training, and regularly tracking progress, resulting in a noticeable increase in skill proficiency.",
       "Fostered a safe environment for the team by promoting open communication, respect, and collaboration."
@@ -78,6 +110,14 @@
       "name": "Diwala Cred",
       "url": "cred.diwala.io",
       "description": "Decentralized Web3 platform for issue, share, and verify digital credentials"
+    },
+    "keyMetric": {
+      "value": "50%",
+      "label": "Fewer Support Queries"
+    },
+    "gradient": {
+      "from": "oklch(0.55 0.20 300)",
+      "to": "oklch(0.50 0.25 330)"
     },
     "achievements": [
       "Decreased process cycle time by 40% by reducing client issuance flow steps.",
@@ -109,6 +149,14 @@
       "url": "events.captello.com",
       "description": "Event management & CRM web application"
     },
+    "keyMetric": {
+      "value": "30%",
+      "label": "Faster Dev Speed"
+    },
+    "gradient": {
+      "from": "oklch(0.60 0.18 30)",
+      "to": "oklch(0.55 0.22 50)"
+    },
     "achievements": [
       "Modernized the tech stack and boosted dev speed by 30% by transitioning from PHP to React web apps.",
       "Minimized technical debt and maintenance costs through the implementation of maintainable architecture and proactive management of application dependencies, resulting in enhanced system reliability."
@@ -125,6 +173,14 @@
       "name": "Rich Messages Authoring Tool",
       "url": null,
       "description": "Authoring rich messages web tool for Genesys users"
+    },
+    "keyMetric": {
+      "value": "75%",
+      "label": "Faster Authoring"
+    },
+    "gradient": {
+      "from": "oklch(0.58 0.15 60)",
+      "to": "oklch(0.50 0.18 80)"
     },
     "achievements": [
       "Shortened rich messaging authoring time by 75% by building an intuitive forms and JSON editor.",
