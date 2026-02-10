@@ -54,6 +54,12 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 - Use GitHub Actions secrets to manage sensitive information in CI/CD pipelines.
 - Monitor site traffic for unusual activity that may indicate a security breach.
 
+# Rules
+
+- Use askUserQuestions() to ask the user questions and get their input.
+- provide a recommended answer when askUserQuestions() is called, but allow the user to modify it.
+- Use frontend design skill when a design is needed.
+
 # Instructions
 
 - Keep track of project code analysis and exploration for the codebase structure as Markdown file on 
@@ -71,3 +77,13 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 - Match themes colors at /src/styles.css
 - Always build responsive designs for light and dark themes, and ensure the UI adapts seamlessly to both.
 - Always build mobile first designs, ensuring the UI is optimized for smaller screens before scaling up to larger devices.
+
+## Browser Automation
+
+Use `agent-browser` for web automation. Run `agent-browser --help` for all commands.
+
+Core workflow:
+1. `agent-browser open <url>` - Navigate to page
+2. `agent-browser snapshot -i` - Get interactive elements with refs (@e1, @e2)
+3. `agent-browser click @e1` / `fill @e2 "text"` - Interact using refs
+4. Re-snapshot after page changes
