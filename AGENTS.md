@@ -67,3 +67,7 @@ DevPlusCoder.com is the personal website of Mohammed Zaghloul, an independent so
 - UI components should be stateless (data-down - action-up) and reusable, with state management handled at a higher 
   level when necessary.
 - Use Tailwind CSS for styling to maintain consistency and speed up development.
+- Don't use Framer Motion, use existing tailwind CSS and plain CSS for animation.
+- Match themes colors at /src/styles.css
+- Always build responsive designs for light and dark themes, and ensure the UI adapts seamlessly to both.
+- Always build mobile first designs, ensuring the UI is optimized for smaller screens before scaling up to larger devices.
