@@ -4,6 +4,7 @@ import { TopEndLight } from '@/features/landing/components/TopEndLight'
 import { SocialLinks } from '@/features/landing/components/SocialLinks'
 import { HeroHeadshot } from '@/features/landing/components/HeroHeadshot'
 import { HeroCompanies } from '@/features/landing/components/HeroCompanies'
+import { ShaderBackground } from '@/core/components/ShaderBackground'
 
 export function HeroSection() {
   return (
@@ -14,6 +15,7 @@ export function HeroSection() {
         <TopEndLight />
 
         <section className="relative z-10 pt-16.5">
+          <ShaderBackground />
           <div className="pt-12 pb-20 sm:pt-0 md:pb-20 lg:pt-44 lg:pb-45">
             <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
               <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
@@ -41,7 +43,7 @@ export function HeroSection() {
                   <SocialLinks className="px-5" />
                 </div>
               </div>
-              <div className="slide-up-blur-in -z-10 order-first ml-auto w-full object-cover delay-50 lg:absolute lg:inset-0 lg:-top-65 lg:-right-20 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0">
+              <div className="slide-up-blur-in -z-10 order-first ml-auto w-full object-cover delay-50 lg:absolute lg:inset-0 lg:-top-65 lg:-right-20 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:invert-0">
                 <HeroHeadshot />
               </div>
             </div>
