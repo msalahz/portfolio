@@ -31,6 +31,7 @@ const i18nInitOptions: InitOptions = {
       return lang.startsWith('ar') ? 'ar' : lang.startsWith('en') ? 'en' : 'en'
     },
   },
+  showSupportNotice: false,
   debug: envClient.VITE_ENABLE_I18N_DEBUG === 'true', // Shows warnings for conflicts in dev
 }
 
