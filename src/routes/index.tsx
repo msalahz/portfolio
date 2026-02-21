@@ -4,6 +4,7 @@ import { AboutSection } from '@/features/landing/components/AboutSection'
 import { StatsSection } from '@/features/landing/components/StatsSections'
 import { FooterSection } from '@/features/landing/components/FooterSection'
 import { WorkHistorySection } from '@/features/landing/components/WorkHistorySection'
+import { ContactSection } from '@/features/landing/components/ContactSection'
 
 export const Route = createFileRoute('/')({ component: App })
 
@@ -14,6 +15,7 @@ function App() {
       <AboutSection />
       <StatsSection />
       <WorkHistorySection />
+      <ContactSection />
       <FooterSection />
     </div>
   )
