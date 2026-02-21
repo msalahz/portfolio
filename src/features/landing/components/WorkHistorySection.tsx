@@ -1,9 +1,9 @@
 import { cn } from '@/integrations/shadcn/lib/utils'
-import { useInView } from '@/core/hooks/useInView'
-import { WorkHistoryHeader } from '@/features/landing/components/WorkHistoryHeader'
 import { BentoGrid } from '@/features/landing/components/BentoGrid'
 import { BentoCard } from '@/features/landing/components/BentoCard'
 import { BentoCtaCard } from '@/features/landing/components/BentoCtaCard'
+import { WorkHistoryHeader } from '@/features/landing/components/WorkHistoryHeader'
+
 import workHistoryData from '@/data/work-history.json'
 
 export interface WorkHistoryEntry {
@@ -33,27 +33,22 @@ const WORK_HISTORY: Array<WorkHistoryEntry> = workHistoryData.map((entry) => ({
 const FEATURED_INDICES = new Set([1, 2])
 
 export function WorkHistorySection({ className, ...props }: React.ComponentProps<'section'>) {
-  const { ref: gridRef, inView: gridInView } = useInView<HTMLDivElement>({ threshold: 0.1 })
-
   return (
     <section id="work" className={cn('py-16 md:py-32', className)} {...props}>
       <div className="mx-auto max-w-6xl space-y-12 px-6 md:space-y-16">
         <WorkHistoryHeader />
 
-        <div ref={gridRef}>
-          <BentoGrid>
-            {WORK_HISTORY.map((entry, index) => (
-              <BentoCard
-                key={`${entry.company}-${entry.role}`}
-                entry={entry}
-                index={index}
-                featured={FEATURED_INDICES.has(index)}
-                inView={gridInView}
-              />
-            ))}
-            <BentoCtaCard />
-          </BentoGrid>
-        </div>
+        <BentoGrid>
+          {WORK_HISTORY.map((entry, index) => (
+            <BentoCard
+              key={`${entry.company}-${entry.role}`}
+              entry={entry}
+              index={index}
+              featured={FEATURED_INDICES.has(index)}
+            />
+          ))}
+          <BentoCtaCard />
+        </BentoGrid>
       </div>
     </section>
   )
