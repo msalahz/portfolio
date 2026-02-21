@@ -13,7 +13,7 @@ export function HeroSection() {
       <main className="overflow-x-hidden">
         <TopEndLight />
 
-        <section className="relative z-10">
+        <section className="relative z-10 pt-16.5">
           <div className="pt-12 pb-20 sm:pt-0 md:pb-20 lg:pt-44 lg:pb-45">
             <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
               <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
