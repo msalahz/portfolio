@@ -16,7 +16,7 @@ export function HeroHeader() {
       <span className="scroll-progress-indicator" />
       <nav
         data-state={menuState && 'active'}
-        className="fixed z-20 w-full border-b border-dashed bg-white/75 backdrop-blur dark:bg-zinc-950/75"
+        className="fixed z-20 w-full border-b border-dashed bg-white/10 backdrop-blur-3xl dark:bg-zinc-950/10"
       >
         <div className="m-auto max-w-6xl px-6">
           <div className="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
