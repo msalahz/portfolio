@@ -5,6 +5,7 @@ const links = [
   { name: 'About', href: '/#about' },
   { name: 'Stats', href: '/#stats' },
   { name: 'Work', href: '/#work' },
+  { name: 'Contact', href: '/#contact' },
 ]
 
 export function LandingLinks({ className, ...props }: React.ComponentProps<'ul'>) {
