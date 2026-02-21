@@ -1,327 +1,146 @@
-# Mohammed Zaghloul Portfolio | devpluscoder.com
-A modern fullstack React application built with TanStack Start, TypeScript, and Tailwind CSS.
+<div align="center">
+  <img src="public/images/devpluscoder-banner.png" alt="DevPlusCoder.com Banner" width="100%" />
 
-# Development Environment Setup
+  <h1>Mohammed Zaghloul — DevPlusCoder.com</h1>
+
+  <p>
+    Personal portfolio showcasing 12+ years of software engineering, consulting, and end-to-end web solutions.
+  </p>
+
+  <a href="https://devpluscoder.com" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Site-devpluscoder.com-blue?style=for-the-badge" alt="Live Site" />
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Built%20with-TanStack%20Start-orange?style=for-the-badge" alt="TanStack Start" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Deployed%20on-Cloudflare%20Workers-f38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Workers" />
+</div>
+
+---
+
+## Features
+
+- **Work History & Timeline** — A visual timeline of professional experience and milestones
+- **Contact / Let's Work Together** — Reach out via email or book a call to discuss potential projects and collaborations
+- **Light & Dark Mode** — Seamless theme switching with full design support for both modes
+- **Edge Deployed** — Hosted on Cloudflare Workers for low-latency global delivery
+- **Type-Safe End to End** — TypeScript across the full stack with strict type checking
+- **Responsive & Mobile First** — Optimised for all screen sizes, from mobile to desktop
+
+---
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | [TanStack Start](https://tanstack.com/start) |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Routing | [TanStack Router](https://tanstack.com/router) |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) |
+| Components | [Shadcn UI](https://ui.shadcn.com/) |
+| Build Tool | [Vite](https://vitejs.dev/) |
+| Hosting | [Cloudflare Workers](https://workers.cloudflare.com/) |
+| CI/CD | [GitHub Actions](https://github.com/features/actions) |
+| Testing | [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/) |
+| Monitoring | [Cloudflare Analytics](https://www.cloudflare.com/web-analytics/) |
+| Error Tracking | [Sentry](https://sentry.io/) |
+| Env Variables | [t3-env](https://env.t3.gg/) |
+
+---
+
+## Project Structure
+
+```
+portfolio/
+├── public/                     # Static assets
+│   └── images/
+├── src/
+│   ├── backend/                # Server-side logic
+│   │   └── preferences/        # User preference mutations & queries
+│   ├── core/                   # Shared, reusable primitives
+│   │   ├── components/         # Generic UI components (Marquee, RiseReveal, …)
+│   │   ├── hooks/              # Shared React hooks
+│   │   ├── locales/            # i18n translation files (en, ar)
+│   │   ├── theme/              # ThemeProvider, ThemeToggle, useTheme
+│   │   └── utils/
+│   ├── data/                   # Static data (work-history.json, …)
+│   ├── features/
+│   │   └── landing/
+│   │       └── components/     # Page sections (Hero, About, WorkHistory, Contact, …)
+│   ├── integrations/           # Third-party integration wrappers
+│   │   ├── i18n/               # i18next setup & language toggle
+│   │   ├── shadcn/             # Shadcn UI component overrides
+│   │   ├── tanstack-form/      # Form field components & hooks
+│   │   └── tanstack-query/     # Query client & devtools
+│   ├── routes/                 # TanStack Router file-based routes
+│   │   ├── __root.tsx
+│   │   └── index.tsx
+│   ├── router.tsx
+│   ├── styles.css              # Global styles & theme tokens
+│   └── env.client.ts           # Client-side env (t3-env)
+├── docs/                       # Project documentation & specs
+├── vite.config.ts
+├── vitest.config.ts
+├── wrangler.jsonc              # Cloudflare Workers config
+└── tsconfig.json
+```
+
+---
 
 ## Getting Started
 
-To run this application:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 20+
+- [pnpm](https://pnpm.io/) 9+
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/mohammedz/portfolio.git
+cd portfolio
+
+# Install dependencies
 pnpm install
+
+# Start the development server
 pnpm dev
 ```
 
-# Building For Production
+The app will be available at `http://localhost:3000`.
 
-To build this application for production:
+---
 
-```bash
-pnpm build
-```
+## Scripts
 
-## Testing
+| Command | Description |
+|---|---|
+| `pnpm dev` | Start the development server |
+| `pnpm build` | Build for production |
+| `pnpm test` | Run tests with Vitest |
+| `pnpm lint` | Lint with ESLint |
+| `pnpm format` | Format with Prettier |
+| `pnpm check` | Run lint, format, and type checks |
+| `pnpm typecheck` | Run TypeScript type checking |
 
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+---
 
-```bash
-pnpm test
-```
+## Deployment
 
-## Styling
+This project is deployed to **Cloudflare Workers** via **GitHub Actions**.
 
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+- Every push to `main` triggers a production deployment through the CI/CD pipeline.
+- Environment variables are managed securely using [t3-env](https://env.t3.gg/) and GitHub Actions secrets.
 
+---
 
-## Linting & Formatting
+## License
 
+This project is licensed under the MIT License.
 
-This project uses [eslint](https://eslint.org/) and [prettier](https://prettier.io/) for linting and formatting. Eslint is configured using [tanstack/eslint-config](https://tanstack.com/config/latest/docs/eslint). The following scripts are available:
+---
 
-```bash
-pnpm lint
-pnpm format
-pnpm check
-```
-
-
-## Shadcn
-
-Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
-
-```bash
-pnpm dlx shadcn@latest add button
-```
-
-
-## T3Env
-
-- You can use T3Env to add type safety to your environment variables.
-- Add Environment variables to the `src/env.mjs` file.
-- Use the environment variables in your code.
-
-### Usage
-
-```ts
-import { env } from "@/env";
-
-console.log(env.VITE_APP_TITLE);
-```
-
-
-
-
-
-
-## Routing
-This project uses [TanStack Router](https://tanstack.com/router). The initial setup is a file based router. Which means that the routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add another a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing set up the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-
-import { Link } from "@tanstack/react-router";
-
-export const Route = createRootRoute({
-  component: () => (
-    <>
-      <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-        </nav>
-      </header>
-      <Outlet />
-      <TanStackRouterDevtools />
-    </>
-  ),
-})
-```
-
-The `<TanStackRouterDevtools />` component is not required, so you can remove it if you don't want it in your layout.
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-const peopleRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/people",
-  loader: async () => {
-    const response = await fetch("https://swapi.dev/api/people");
-    return response.json() as Promise<{
-      results: {
-        name: string;
-      }[];
-    }>;
-  },
-  component: () => {
-    const data = peopleRoute.useLoaderData();
-    return (
-      <ul>
-        {data.results.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    );
-  },
-});
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-### React-Query
-
-React-Query is an excellent addition or alternative to route loading and integrating it into you application is a breeze.
-
-First add your dependencies:
-
-```bash
-pnpm add @tanstack/react-query @tanstack/react-query-devtools
-```
-
-Next we'll need to create a query client and provider. We recommend putting those in `main.tsx`.
-
-```tsx
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-// ...
-
-const queryClient = new QueryClient();
-
-// ...
-
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
-
-  root.render(
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
-  );
-}
-```
-
-You can also add TanStack Query Devtools to the root route (optional).
-
-```tsx
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
-const rootRoute = createRootRoute({
-  component: () => (
-    <>
-      <Outlet />
-      <ReactQueryDevtools buttonPosition="top-right" />
-      <TanStackRouterDevtools />
-    </>
-  ),
-});
-```
-
-Now you can use `useQuery` to fetch your data.
-
-```tsx
-import { useQuery } from "@tanstack/react-query";
-
-import "./App.css";
-
-function App() {
-  const { data } = useQuery({
-    queryKey: ["people"],
-    queryFn: () =>
-      fetch("https://swapi.dev/api/people")
-        .then((res) => res.json())
-        .then((data) => data.results as { name: string }[]),
-    initialData: [],
-  });
-
-  return (
-    <div>
-      <ul>
-        {data.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default App;
-```
-
-You can find out everything you need to know on how to use React-Query in the [React-Query documentation](https://tanstack.com/query/latest/docs/framework/react/overview).
-
-## State Management
-
-Another common requirement for React applications is state management. There are many options for state management in React. TanStack Store provides a great starting point for your project.
-
-First you need to add TanStack Store as a dependency:
-
-```bash
-pnpm add @tanstack/store
-```
-
-Now let's create a simple counter in the `src/App.tsx` file as a demonstration.
-
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store } from "@tanstack/store";
-import "./App.css";
-
-const countStore = new Store(0);
-
-function App() {
-  const count = useStore(countStore);
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-    </div>
-  );
-}
-
-export default App;
-```
-
-One of the many nice features of TanStack Store is the ability to derive state from other state. That derived state will update when the base state updates.
-
-Let's check this out by doubling the count using derived state.
-
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store, Derived } from "@tanstack/store";
-import "./App.css";
-
-const countStore = new Store(0);
-
-const doubledStore = new Derived({
-  fn: () => countStore.state * 2,
-  deps: [countStore],
-});
-doubledStore.mount();
-
-function App() {
-  const count = useStore(countStore);
-  const doubledCount = useStore(doubledStore);
-
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-      <div>Doubled - {doubledCount}</div>
-    </div>
-  );
-}
-
-export default App;
-```
-
-We use the `Derived` class to create a new store that is derived from another store. The `Derived` class has a `mount` method that will start the derived store updating.
-
-Once we've created the derived store we can use it in the `App` component just like we would any other store using the `useStore` hook.
-
-You can find out everything you need to know on how to use TanStack Store in the [TanStack Store documentation](https://tanstack.com/store/latest).
-
-# Learn More
-
-You can learn more about all the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
+<div align="center">
+  Built by <a href="https://devpluscoder.com">Mohammed Zaghloul</a>
+</div>
