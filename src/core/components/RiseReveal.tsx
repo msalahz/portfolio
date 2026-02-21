@@ -7,7 +7,9 @@ export interface RiseRevealProps extends React.ComponentProps<'div'> {
   asChild?: boolean
 }
 export function RiseReveal({ className, asChild = false, ...props }: RiseRevealProps) {
-  const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.1 })
+  const { ref, inView } = useInView<HTMLDivElement>({
+    threshold: 0.05,
+  })
   const Comp = asChild ? Slot.Root : 'div'
   return (
     <Comp
