@@ -4,7 +4,7 @@
   <h1>Mohammed Zaghloul — DevPlusCoder.com</h1>
 
   <p>
-    Personal portfolio showcasing 12+ years of software engineering, consulting, and end-to-end web solutions.
+    Personal portfolio — 12+ years building web software, consulting, and shipping end-to-end products.
   </p>
 
   <a href="https://devpluscoder.com" target="_blank">
@@ -20,16 +20,16 @@
 
 ## Features
 
-- **Work History & Timeline** — A visual timeline of professional experience and milestones
-- **Contact / Let's Work Together** — Reach out via email or book a call to discuss potential projects and collaborations
-- **Light & Dark Mode** — Seamless theme switching with full design support for both modes
-- **Edge Deployed** — Hosted on Cloudflare Workers for low-latency global delivery
-- **Type-Safe End to End** — TypeScript across the full stack with strict type checking
-- **Responsive & Mobile First** — Optimised for all screen sizes, from mobile to desktop
+- **Work history** — Visual timeline of experience and milestones
+- **Contact** — Reach out via email or book a call
+- **Light & dark mode** — Full design support for both themes
+- **Edge deployed** — Runs on Cloudflare Workers, close to the user
+- **TypeScript end-to-end** — Strict type checking across the full stack
+- **Mobile first** — Designed for small screens, scales up cleanly
 
 ---
 
-## Tech Stack
+## Tech stack
 
 | Category | Technology |
 |---|---|
@@ -38,17 +38,17 @@
 | Routing | [TanStack Router](https://tanstack.com/router) |
 | Styling | [Tailwind CSS](https://tailwindcss.com/) |
 | Components | [Shadcn UI](https://ui.shadcn.com/) |
-| Build Tool | [Vite](https://vitejs.dev/) |
+| Build tool | [Vite](https://vitejs.dev/) |
 | Hosting | [Cloudflare Workers](https://workers.cloudflare.com/) |
 | CI/CD | [GitHub Actions](https://github.com/features/actions) |
 | Testing | [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/) |
 | Monitoring | [Cloudflare Analytics](https://www.cloudflare.com/web-analytics/) |
-| Error Tracking | [Sentry](https://sentry.io/) |
-| Env Variables | [t3-env](https://env.t3.gg/) |
+| Error tracking | [Sentry](https://sentry.io/) |
+| Env variables | [t3-env](https://env.t3.gg/) |
 
 ---
 
-## Project Structure
+## Project structure
 
 ```
 portfolio/
@@ -87,7 +87,7 @@ portfolio/
 
 ---
 
-## Getting Started
+## Getting started
 
 ### Prerequisites
 
@@ -97,18 +97,13 @@ portfolio/
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/mohammedz/portfolio.git
 cd portfolio
-
-# Install dependencies
 pnpm install
-
-# Start the development server
 pnpm dev
 ```
 
-The app will be available at `http://localhost:3000`.
+The app runs at `http://localhost:3000`.
 
 ---
 
@@ -128,16 +123,13 @@ The app will be available at `http://localhost:3000`.
 
 ## Deployment
 
-This project is deployed to **Cloudflare Workers** via **GitHub Actions**.
-
-- Every push to `main` triggers a production deployment through the CI/CD pipeline.
-- Environment variables are managed securely using [t3-env](https://env.t3.gg/) and GitHub Actions secrets.
+Deployed to **Cloudflare Workers** via **GitHub Actions**. Every push to `main` goes straight to production. Environment variables are managed with [t3-env](https://env.t3.gg/) and GitHub Actions secrets.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
+MIT
 
 ---
 
