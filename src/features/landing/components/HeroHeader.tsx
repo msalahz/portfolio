@@ -8,6 +8,9 @@ import { LandingLinks } from '@/features/landing/components/LandingLinks'
 
 export function HeroHeader() {
   const [menuState, setMenuState] = useState(false)
+  function toggleMenu() {
+    setMenuState(!menuState)
+  }
   return (
     <header>
       <span className="scroll-progress-indicator" />
@@ -23,7 +26,7 @@ export function HeroHeader() {
               </Link>
 
               <button
-                onClick={() => setMenuState(!menuState)}
+                onClick={toggleMenu}
                 aria-label={menuState ? 'Close Menu' : 'Open Menu'}
                 className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
               >
@@ -34,7 +37,7 @@ export function HeroHeader() {
 
             <div className="bg-background mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:pr-4">
-                <LandingLinks />
+                <LandingLinks onItemClick={toggleMenu} />
               </div>
 
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
@@ -48,7 +51,7 @@ export function HeroHeader() {
                     <span>Login</span>
                   </Link>
                 </Button>
-                <ThemeToggle />
+                <ThemeToggle onChange={toggleMenu} />
               </div>
             </div>
           </div>

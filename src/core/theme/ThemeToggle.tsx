@@ -41,7 +41,17 @@ export function ThemeToggleButton({
   )
 }
 
-export function ThemeToggle() {
+export interface ThemeToggleProps {
+  onChange?: (theme: Theme) => void
+}
+
+export function ThemeToggle({ onChange = noop }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme()
-  return <ThemeToggleButton theme={theme} onChange={setTheme} />
+
+  function handleChange(newTheme: Theme) {
+    setTheme(newTheme)
+    onChange(newTheme)
+  }
+
+  return <ThemeToggleButton theme={theme} onChange={handleChange} />
 }
