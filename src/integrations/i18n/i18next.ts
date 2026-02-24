@@ -6,7 +6,7 @@ import type { InitOptions } from 'i18next'
 import type { Language } from '@/core/schemas'
 import type { Resources } from '@/integrations/i18n/resources'
 
-import { envClient } from '@/env.client'
+import { envClient } from '@/env'
 import { defaultNS, resources } from '@/integrations/i18n/resources'
 
 declare module 'i18next' {

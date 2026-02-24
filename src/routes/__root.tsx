@@ -10,7 +10,7 @@ import type { QueryClient } from '@tanstack/query-core'
 import type { i18n } from 'i18next'
 import type { Language, Theme } from '@/core/schemas'
 
-import { envClient } from '@/env.client'
+import { envClient } from '@/env'
 import { useTheme } from '@/core/theme/useTheme'
 import { cn } from '@/integrations/shadcn/lib/utils'
 import { NotFound } from '@/core/components/NotFound'
